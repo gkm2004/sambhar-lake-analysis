@@ -71,7 +71,7 @@ jupyter notebook Sambhar_Lake_Analysis.ipynb
 
 ## Full report
 
-See [`docs/Remote_Sensing_of_Sambhar_Lake.pdf`](docs/Remote_Sensing_of_Sambhar_Lake.pdf) for the complete write-up, including all cluster-stability charts and yearly NDWI cluster maps.
+See [`docs/Remote Sensing of Sambhar Lake.pdf`](docs/Remote_Sensing_of_Sambhar_Lake.pdf) for the complete write-up, including all cluster-stability charts and yearly NDWI cluster maps.
 
 ## Future work
 
