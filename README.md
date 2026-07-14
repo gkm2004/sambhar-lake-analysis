@@ -9,7 +9,8 @@ Sambhar Lake is a saline, ephemeral lake in Rajasthan, India, whose surface wate
 ## Data
 
 - **Satellite imagery:** Multispectral Sentinel-2 imagery, provided by the European Space Agency through the Copernicus Programme. One cloud-free image from the post-monsoon period was selected for each year, 2022–2024.
-- **Climate data:** Annual precipitation and temperature summaries for the Sambhar region (see `Table 1-1` in the full report), used to compare rainfall against surface water patterns.
+- **Climate data:** Annual precipitation and temperature summaries for the Sambhar region, used to compare rainfall against surface water patterns.
+- **Lake boundary:** Polygon geometries (`MyLakeProject/polygons/`) used to clip satellite rasters to the Sambhar Lake extent.
 
 ## Methods
 
@@ -32,6 +33,11 @@ NDWI maps and clustering reveal clear spatial variability in surface water prese
 
 Years with higher precipitation generally correspond to increased NDWI values, though the magnitude of response varies by cluster. Some clusters remain spatially stable year to year, while intermediate zones show frequent transitions — indicating higher sensitivity to rainfall fluctuations. The driest clusters show limited responsiveness to precipitation, likely reflecting salt-crust or evaporative zones.
 
+### Cluster transitions over time
+
+![Cluster transitions 2022→2023](figures/2022_2023.png)
+![Cluster transitions 2023→2024](figures/2023_2024.png)
+
 ## Discussion
 
 These clustering patterns align with prior geochemical and sedimentological research describing Sambhar Lake as a spatially heterogeneous evaporative system. NDWI doesn't directly measure water depth or salinity, and surface reflectance in saline environments can also be influenced by biological activity (e.g. algal or microbial blooms) — so observed clusters likely reflect combined surface processes rather than water presence alone.
@@ -44,11 +50,22 @@ NDWI-based clustering effectively reveals structured yet dynamic surface water p
 
 ```
 sambhar-lake-analysis/
-├── Sambhar_Lake_Analysis.ipynb        # Main analysis notebook
-├── data/                               # Satellite imagery / derived data
+├── SambharLake_Analysis.ipynb          # Main analysis notebook
+├── MyLakeProject/
+│   ├── Sambhar/
+│   │   ├── 2022/                        # Year-specific imagery/derived rasters
+│   │   ├── 2023/
+│   │   ├── 2024/
+│   │   └── sambhar_climate_summary_2022_2024.csv
+│   └── polygons/
+│       ├── sambhar.geojson              # Lake boundary
+│       ├── didwana.geojson
+│       └── lunkaransar.geojson
+├── figures/                             # Saved output charts (heatmaps, etc.)
 ├── docs/
-│   └── Remote Sensing of Sambhar Lake.pdf # Full written report
+│   └── Remote Sensing of Sambhar Lake.pdf   # Full written report
 ├── requirements.txt
+├── LICENSE
 └── README.md
 ```
 
@@ -58,24 +75,27 @@ sambhar-lake-analysis/
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gkm2004/sambhar-lake-analysis/blob/main/SambharLake_Analysis.ipynb)
 
+**Important:** Colab only opens the notebook file itself — it does not automatically pull in the rest of the repo (data, polygons, etc.). Run this as the first cell so the data is available:
+
+```python
+!git clone https://github.com/gkm2004/sambhar-lake-analysis.git
+%cd sambhar-lake-analysis
+```
+
 ### Option 2: Run locally
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/sambhar-lake-analysis.git
+git clone https://github.com/gkm2004/sambhar-lake-analysis.git
 cd sambhar-lake-analysis
 python3 -m venv venv
 source venv/bin/activate       # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-jupyter notebook Sambhar_Lake_Analysis.ipynb
+jupyter notebook SambharLake_Analysis.ipynb
 ```
-### Cluster transitions over time
-
-![Cluster transitions 2022→2023](figures/2022_2023.png)
-![Cluster transitions 2023→2024](figures/2023_2024.png)
 
 ## Full report
 
-See docs/Remote Sensing of Sambhar Lake.pdf for the complete write-up, including all cluster-stability charts and yearly NDWI cluster maps.
+See [`docs/Remote Sensing of Sambhar Lake.pdf`](docs/Remote%20Sensing%20of%20Sambhar%20Lake.pdf) for the complete write-up, including all cluster-stability charts and yearly NDWI cluster maps.
 
 ## Future work
 
@@ -86,4 +106,4 @@ See docs/Remote Sensing of Sambhar Lake.pdf for the complete write-up, including
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
