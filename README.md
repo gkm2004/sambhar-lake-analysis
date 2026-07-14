@@ -47,7 +47,7 @@ sambhar-lake-analysis/
 ├── Sambhar_Lake_Analysis.ipynb        # Main analysis notebook
 ├── data/                               # Satellite imagery / derived data
 ├── docs/
-│   └── Remote_Sensing_of_Sambhar_Lake.pdf   # Full written report
+│   └── Remote Sensing of Sambhar Lake.pdf # Full written report
 ├── requirements.txt
 └── README.md
 ```
@@ -71,7 +71,7 @@ jupyter notebook Sambhar_Lake_Analysis.ipynb
 
 ## Full report
 
-See [`docs/Remote Sensing of Sambhar Lake.pdf`](docs/Remote_Sensing_of_Sambhar_Lake.pdf) for the complete write-up, including all cluster-stability charts and yearly NDWI cluster maps.
+See [`docs/Remote Sensing of Sambhar Lake.pdf`](Remote Sensing of Sambhar Lake.pdf) for the complete write-up, including all cluster-stability charts and yearly NDWI cluster maps.
 
 ## Future work
 
