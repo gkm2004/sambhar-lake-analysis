@@ -68,6 +68,10 @@ source venv/bin/activate       # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 jupyter notebook Sambhar_Lake_Analysis.ipynb
 ```
+### Cluster transitions over time
+
+![Cluster transitions 2022→2023](figures/2022_2023.png)
+![Cluster transitions 2023→2024](figures/2023_2024.png)
 
 ## Full report
 
