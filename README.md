@@ -56,7 +56,7 @@ sambhar-lake-analysis/
 
 ### Option 1: Run in Google Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/sambhar-lake-analysis/blob/main/Sambhar_Lake_Analysis.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gkm2004/sambhar-lake-analysis/blob/main/Sambhar_Lake_Analysis.ipynb)
 
 ### Option 2: Run locally
 
