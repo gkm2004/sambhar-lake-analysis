@@ -47,7 +47,7 @@ sambhar-lake-analysis/
 ├── Sambhar_Lake_Analysis.ipynb        # Main analysis notebook
 ├── data/                               # Satellite imagery / derived data
 ├── docs/
-│   └── Remote_Sensing_of_Sambhar_Lake.pdf   # Full written report
+│   └── Remote Sensing of Sambhar Lake.pdf # Full written report
 ├── requirements.txt
 └── README.md
 ```
@@ -56,7 +56,7 @@ sambhar-lake-analysis/
 
 ### Option 1: Run in Google Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gkm2004/sambhar-lake-analysis/blob/main/Sambhar_Lake_Analysis.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gkm2004/sambhar-lake-analysis/blob/main/SambharLake_Analysis.ipynb)
 
 ### Option 2: Run locally
 
@@ -71,7 +71,7 @@ jupyter notebook Sambhar_Lake_Analysis.ipynb
 
 ## Full report
 
-See [`docs/Remote_Sensing_of_Sambhar_Lake.pdf`](docs/Remote_Sensing_of_Sambhar_Lake.pdf) for the complete write-up, including all cluster-stability charts and yearly NDWI cluster maps.
+See docs/Remote Sensing of Sambhar Lake.pdf for the complete write-up, including all cluster-stability charts and yearly NDWI cluster maps.
 
 ## Future work
 
